@@ -12,15 +12,30 @@
         table {
             width: 400px;
             border-collapse: collapse;
+            position: relative;
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
         }
         td, th {
             border: 1px solid black;
-            padding: 8px;
-            
+            padding: 8px;   
+        }
+        thead > tr > th {
+            position: sticky;
+            top: 0;
+            background-color: gray;
+        }
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
         }
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+        td.num {
+            text-align: right;
         }
     </style>
 </head>
@@ -29,38 +44,136 @@
     <!--
         ANATOMIA PARA TABELAS GRNADES
         TABLE
+            CAPION
             THEAD
                 TR, TD, TH
             TBODY
                 TR, TD, TH
             TFOOT
-                TR, TD, TH
+                TR, TD (dados), TH (titulo)
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>São Paulo</td>
-                <td>45.919.046</td>
+                <td class="num">45.919.046</td>
             </tr>
             <tr>
                 <td>Minas Gerais</td>
-                <td>21.168.791</td>
+                <td class="num">21.168.791</td>
             </tr>
             <tr>
                 <td>Rio de Janeiro</td>
-                <td>17.264.943</td>
+                <td class="num">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.433.957</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9.557.071</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9.132.078</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8.602.865</td>
+            </tr>
+            <tr>
+                <td>Santa Catárina</td>
+                <td class="num">7.164.788</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">6.003.788</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">6.574.789</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">3.514.952</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">3.766.528</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">3.483.985</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3.035.122</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3.168.027</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3.118.360</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3.120.494</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">2.923.369</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2.449.024</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.068.017</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1.562.409</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1.383.445</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">733.559</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">669.526</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">450.479</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habilidades</th>
-                <td>0000</td>
+                <th scope="row">Total de habilidades</th>
+                <td class="num"><strong>204.519.715</strong></td>
             </tr>
         </tfoot>
     </table>
